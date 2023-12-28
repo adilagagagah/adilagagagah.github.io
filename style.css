@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    margin: 0;
+    font-family: "Arial";
+}
+
+h1 {
+    font-size: 55px;
+    margin: 5px 0px;
+}
+
+h2 {
+    font-size: 45px;
+    margin: 5px 0px;
+    padding-bottom: 50px;
+}
+
+p {
+    font-size: 15px;
+    margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #e6e6e6;
+    width: 100%;
+    padding: 20px 10px;
+    position :fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.header-mid {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.header-mid a {
+    color: black;
+    padding: 0 40px;
+}
+
+/*  */
+.home-wrapper {
+    background-color: #e6e6e6;
+    height: 575px;
+    padding-top: 120px;
+    padding-left: 80px;
+    text-align: left;
+}
+
+.home-left {
+    position: relative;
+    top: 50px;
+    width: 500px;
+}
+
+.gambar {
+    position: relative;
+}
+
+.brush {
+    width: 700px;
+    left: 450px;
+    bottom: 340px;
+}
+
+.gagah {
+    width: 380px;
+    bottom: 470px;
+    right: 50px;
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px); /* Sesuaikan nilai dengan lebar viewport atau container */
+    }
+}
+
+.arrow {
+    width: 15px;
+    bottom: 510px;
+    left: 10px;
+    animation: moveDown 2s linear infinite;
+}
+
+/*  */
+.about-wrapper {
+    background-color: #3B598B;
+    color: white;
+    height: 580px;
+    padding-top: 50px;
+    padding-left: 80px;
+    text-align:justify;
+}
+
+.about-wrapper p {
+    width: 500px;
+}
+
+.kolase {
+    width: 500px;
+    left: 570px;
+    bottom: 350px;
+}
+
+/*  */
+.portofolio-wrapper {
+    background-color: #e6e6e6;
+    height: 580px;
+    padding-top: 50px;
+    padding-left: 80px;
+    text-align:justify;
+}
