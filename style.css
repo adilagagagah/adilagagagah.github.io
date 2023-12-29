@@ -112,8 +112,8 @@ header {
 .about-wrapper {
     background-color: #3B598B;
     color: white;
-    height: 580px;
-    padding-top: 50px;
+    height: 610px;
+    padding-top: 80px;
     padding-left: 80px;
     text-align:justify;
 }
@@ -132,7 +132,7 @@ header {
 .portofolio-wrapper {
     background-color: #e6e6e6;
     /* height: 1200px; */
-    padding-top: 50px;
+    padding-top: 80px;
     padding-left: 80px;
     padding-bottom: 50px;
 }
