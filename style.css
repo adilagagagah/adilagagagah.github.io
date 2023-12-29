@@ -13,7 +13,7 @@ h1 {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 35px;
     margin: 5px 0px;
     padding-bottom: 30px;
 }
@@ -148,6 +148,7 @@ header {
 
 .projects::-webkit-scrollbar{
     width: 1;
+    /* ubah ini menjadi 0 untuk menghilangkan scrollbar */
 }
 
 .project {
@@ -169,4 +170,37 @@ header {
     margin: 5px;
     display: block;
     font-weight: bold;
+}
+
+.project:hover {
+    opacity: 0.8;
+}
+
+/*  */
+.contact-wrapper {
+    background-color: #3B598B;
+    color: white;
+    height: 280px;
+    padding-top: 50px;
+    padding-left: 80px;
+}
+
+.fa {
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+.contacts {
+    margin-left: 30px;
+}
+
+.contact {
+    color: white;
+    display: block;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.contact:hover {
+    text-decoration: underline;
 }
