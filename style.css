@@ -57,8 +57,13 @@ header {
 
 .header-mid a {
     color: black;
-    padding: 0 40px;
+    margin: 0 40px;
     font-size: 20px;
+    width: fit-content;
+}
+
+.header-mid a:hover {
+    font-weight: bold;
 }
 
 /*  */
@@ -76,6 +81,27 @@ header {
     width: 500px;
 }
 
+.resume {
+    padding: 15px 40px;
+    background-color: #3B598B;
+    box-shadow: 0 7px #213659;
+    color: white;
+    display: inline-block;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.resume:hover {
+    opacity: 0.95;
+}
+  
+.resume:active {
+    position: relative;
+    top: 7px;
+    box-shadow: none;
+}
+
 .gambar {
     position: relative;
 }
@@ -83,13 +109,13 @@ header {
 .brush {
     width: 700px;
     left: 450px;
-    bottom: 340px;
+    bottom: 440px;
 }
 
 .gagah {
     width: 380px;
-    bottom: 470px;
     right: 50px;
+    bottom: 570px;
 }
 
 @keyframes moveDown {
@@ -103,7 +129,7 @@ header {
 
 .arrow {
     width: 15px;
-    bottom: 510px;
+    bottom: 610px;
     left: 10px;
     animation: moveDown 2s linear infinite;
 }
