@@ -81,6 +81,10 @@ header {
     width: 500px;
 }
 
+.home-left p {
+    margin: 5px 0px;
+}
+
 .resume {
     padding: 15px 40px;
     background-color: #3B598B;
