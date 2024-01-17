@@ -546,6 +546,10 @@ video {
 
 .container {
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
 @media (min-width: 640px) {
@@ -572,9 +576,9 @@ video {
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1320px) {
   .container {
-    max-width: 1536px;
+    max-width: 1320px;
   }
 }
 
@@ -603,13 +607,13 @@ video {
   padding-top: 9rem;
 }
 
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
-.font-semibold {
-  font-weight: 600;
+.font-bold {
+  font-weight: 700;
 }
 
 .text-primary {
