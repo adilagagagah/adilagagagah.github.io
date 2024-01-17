@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '16px',
+      padding: '20px',
     },
     extend: {
       colors: {
@@ -12,7 +12,8 @@ module.exports = {
         dark: '#0f172a', //slate-900
       },
       screens: {
-        '2xl': '1320px',
+        'xl' : '1024px',
+        '2xl': '1024px',
       },
     },
   },
