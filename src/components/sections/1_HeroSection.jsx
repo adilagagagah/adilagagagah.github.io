@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <section className="flex min-h-screen items-center px-6">
+    <section className="flex min-h-screen items-center px-6 pt-16 pb-12 md:pt-18 md:pb-12">
 
       <div className="mx-auto grid max-w-7xl gap-16 md:grid-cols-2">
 
@@ -44,7 +44,7 @@ export default function HeroSection() {
             <div className="mb-6 flex items-center justify-between">
 
               <h3 className="text-lg font-semibold">
-                AI Pipeline
+                Automation & Impact
               </h3>
 
               <div className="h-3 w-3 rounded-full bg-green-400" />
@@ -56,11 +56,11 @@ export default function HeroSection() {
               <div className="rounded-2xl bg-white/5 p-4">
 
                 <p className="text-sm text-gray-400">
-                  Model Accuracy
+                  Total Programs
                 </p>
 
                 <h2 className="mt-2 text-3xl font-bold">
-                  94.2%
+                  4+ Production-Ready Automation Engines
                 </h2>
 
               </div>
@@ -70,11 +70,11 @@ export default function HeroSection() {
                 <div className="rounded-2xl bg-white/5 p-4">
 
                   <p className="text-sm text-gray-400">
-                    Latency
+                    Total Time Saved
                   </p>
 
                   <h3 className="mt-2 text-2xl font-bold">
-                    120ms
+                    99.3 hours
                   </h3>
 
                 </div>
