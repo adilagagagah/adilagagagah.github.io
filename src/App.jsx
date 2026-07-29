@@ -7,23 +7,40 @@ import ExperienceSection from "./components/sections/4_ExperienceSection";
 import ContactSection from "./components/sections/5_ContactSection";
 import Footer from "./components/sections/6_Footer";
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import DuoNote from './pages/DuoNote';
+
 function App() {
   return (
-    <div className="bg-[#0B0F19] text-white">
-      
-      <Navbar />
+    <Router>
+      <Routes>
 
-      <main>
-        <HeroSection />
-        <TechStackSection />
-        <ProjectsSection />
-        <ExperienceSection />
-        <ContactSection />
-      </main>
+        {/* 0. Halaman Utama Portfolio */}
+        <Route path="/" element={
+          <div className="bg-[#0B0F19] text-white">
+            
+            <Navbar />
 
-      <Footer />
+            <main>
+              <HeroSection />
+              <TechStackSection />
+              <ProjectsSection />
+              <ExperienceSection />
+              <ContactSection />
+            </main>
 
-    </div>
+            <Footer />
+
+          </div>
+        } />
+
+        {/* 99. Halaman /duo-note */}
+        <Route path="/duo-note" element={
+          <DuoNote />
+        } />
+
+      </Routes>
+    </Router>
   );
 }
 

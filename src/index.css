@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'CurveRetro';
+  src: url('./font/CurveRetro-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'CanvaSans';
+  src: url('./font/CanvaSans-Regular.otf') format('truetype');
+}
