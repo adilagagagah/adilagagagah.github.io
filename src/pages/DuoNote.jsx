@@ -129,17 +129,17 @@ export default function DuoNote() {
           </h1>
         </div>
 
-        {/* Hero Image (Novi & Dewi) */}
+        {/* Hero Image (Novi & Ute) */}
         <img 
-          src="../src/assets/duo-note/novi-dewi-hero-flip.png" 
-          alt="Novi and Dewi" 
-          className="relative z-10 left-5 bottom-20 w-full max-w-xl object-contain drop-shadow-2xl"
+          src="/duo-note/novi-ute.png" 
+          alt="Novi and Ute" 
+          className="relative z-10 left-5 bottom-5 w-full max-w-[650px] object-contain drop-shadow-2xl"
         />
 
         {/* Names */}
         <div className="absolute bottom-20 w-full flex justify-between px-64 z-20">
-          <h2 className="text-6xl font-['Laries'] text-[#bdc1bf]">Novi</h2>
-          <h2 className="text-6xl font-['Laries'] text-[#5a708e]">Dewi</h2>
+          <h2 className="text-6xl font-['Laries'] text-[#bdc1bf] drop-shadow-[1px_2px_0px_#FDF9EE]">Novi</h2>
+          <h2 className="text-6xl font-['Laries'] text-[#5a708e] drop-shadow-[1px_2px_0px_#FDF9EE]">Utee</h2>
         </div>
       </section>
 
@@ -171,35 +171,35 @@ export default function DuoNote() {
 
           {/* Tombol Interaktif dengan Efek Suara */}
           <button 
-            onClick={() => playSound('../src/assets/duo-note/radio-podcast.mp4')} 
+            onClick={() => playSound('/duo-note/radio-podcast.mp4')} 
             className="absolute top-4 left-10 bg-[#FDF9EE] text-[#4a3f35] px-6 py-3 rounded-3xl rounded-bl-none font-bold text-lg hover:scale-110 transition-transform shadow-lg cursor-pointer"
           >
             "Radioo podcast...."
           </button>
 
           <button 
-            onClick={() => playSound('../src/assets/duo-note/hi-ute.mp4')}
+            onClick={() => playSound('/duo-note/hi-ute.mp4')}
             className="absolute right-4 bg-[#FDF9EE] text-[#4a3f35] px-6 py-3 rounded-3xl rounded-bl-none font-bold text-lg hover:scale-110 transition-transform shadow-lg cursor-pointer"
           >
             "Hii Utee...."
           </button>
 
           <button 
-            onClick={() => playSound('../src/assets/duo-note/huhuw.mp4')} 
+            onClick={() => playSound('/duo-note/huhuw.mp4')} 
             className="absolute top-0 right-10 bg-[#FDF9EE] text-[#4a3f35] px-6 py-3 rounded-3xl rounded-bl-none font-bold text-lg hover:scale-110 transition-transform shadow-lg cursor-pointer"
           >
             "Huhuwww...."
           </button>
 
           <button 
-            onClick={() => playSound('../src/assets/duo-note/halo-kakak-nopi.mp4')} 
+            onClick={() => playSound('/duo-note/halo-kakak-nopi.mp4')} 
             className="absolute bottom-12 left-4 bg-[#FDF9EE] text-[#4a3f35] px-6 py-3 rounded-3xl rounded-bl-none font-bold text-lg hover:scale-110 transition-transform shadow-lg cursor-pointer"
           >
             "Halo kakak Novii...."
           </button>
 
           <button 
-            onClick={() => playSound('../src/assets/duo-note/hai-hai-halo.mp4')} 
+            onClick={() => playSound('/duo-note/hai-hai-halo.mp4')} 
             className="absolute bottom-2 right-20 bg-[#FDF9EE] text-[#4a3f35] px-6 py-3 rounded-3xl rounded-bl-none font-bold text-lg hover:scale-110 transition-transform shadow-lg cursor-pointer"
           >
             "Hai hai halo...."
@@ -217,7 +217,7 @@ export default function DuoNote() {
           <div className="flex justify-center">
             {/* Gambar Album */}
             <img 
-              src="/album-cover.jpg" 
+              src="/duo-note/album.png" 
               alt="Exclusive Album Cover" 
               className="w-[450px] h-[450px] object-cover rounded-[3rem] shadow-2xl"
             />
@@ -251,23 +251,30 @@ export default function DuoNote() {
           {/* Kolom Kiri: Jadwal Tour */}
           <div className="flex flex-col gap-6">
             <div className="bg-[#FDF9EE] text-black text-center py-5 rounded-full font-bold text-xl hover:bg-gray-200 transition-colors cursor-default">
-              Jakarta - 10.10.26
+              Aceh - 10.10.26
             </div>
             <div className="bg-[#FDF9EE] text-black text-center py-5 rounded-full font-bold text-xl hover:bg-gray-200 transition-colors cursor-default">
-              Semarang - 15.10.26
+              Medan - 15.10.26
             </div>
             <div className="bg-[#FDF9EE] text-black text-center py-5 rounded-full font-bold text-xl hover:bg-gray-200 transition-colors cursor-default">
               Palembang - 04.11.26
             </div>
             <div className="bg-[#FDF9EE] text-black text-center py-5 rounded-full font-bold text-xl hover:bg-gray-200 transition-colors cursor-default">
-              Makassar - 31.12.26
+              Balikpapan - 25.11.26
+            </div>
+            <div className="bg-[#FDF9EE] text-black text-center py-5 rounded-full font-bold text-xl hover:bg-gray-200 transition-colors cursor-default">
+              Makassar - 21.12.26
+            </div>
+            <div className="bg-[#FDF9EE] text-black text-center py-3 rounded-full hover:bg-gray-200 transition-colors cursor-default flex flex-col justify-center items-center">
+              <span className="font-bold text-xl">Jakarta - 30.12.26</span>
+              <span className="text-sm font-medium text-gray-600 mt-0.5">featuring - ToepMarley</span>
             </div>
           </div>
           
           {/* Kolom Kanan: Poster */}
           <div className="flex justify-center">
             <img 
-              src="/tour-poster.jpg" 
+              src="/duo-note/duo-note-poster.png" 
               alt="Tour Poster" 
               className="w-full max-w-sm object-cover border-4 border-transparent hover:border-[#FDF9EE] transition-all duration-300"
             />
