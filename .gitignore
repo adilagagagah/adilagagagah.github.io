@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# source gambar, audio
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.mp3
+*.mp4
+

@@ -16,3 +16,7 @@
   font-family: 'Laries';
   src: url('./font/Laries-Regular.otf') format('opentype');
 }
+@font-face {
+  font-family: 'DMSans';
+  src: url('./font/DMSans-Regular.ttf') format('truetype');
+}

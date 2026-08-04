@@ -1,18 +1,15 @@
-export default function ProjectsSection() {
+export default function EducationSection() {
   return (
-    <section
-      id="projects"
-      className="px-6 py-24"
-    >
+    <section className="px-6 py-24">
       
       <div className="mx-auto max-w-7xl">
 
         <h2 className="mb-8 text-4xl font-bold">
-          Featured Projects
+          Education
         </h2>
 
         <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
-          Project cards coming soon
+          Content coming soon
         </div>
 
       </div>
