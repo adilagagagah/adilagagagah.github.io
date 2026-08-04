@@ -11,6 +11,9 @@ import Footer from "./components/sections/8_Footer";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DuoNote from './pages/DuoNote';
 
+import ProjectDetail from './pages/projects/ProjectDetail';
+
+
 function App() {
   return (
     <Router>
@@ -36,6 +39,8 @@ function App() {
 
           </div>
         } />
+
+        <Route path="/projects/:slug" element={<ProjectDetail />} />
 
         {/* 99. Halaman /duo-note */}
         <Route path="/duo-note" element={
