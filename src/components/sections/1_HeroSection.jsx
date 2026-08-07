@@ -71,8 +71,8 @@ export default function HeroSection() {
         <div className="ml-10">
           <p className="text-white font-medium mb-3 font-semibold">Companies I've Contributed To :</p>
           <div className="flex items-center gap-6">
-            {/* <img src="app-icon/logo-white-erajaya.png" alt="Erajaya" className="h-8 grayscale hover:grayscale-0 transition-all" />
-            <img src="app-icon/logo-white-telkom.png" alt="Telkom" className="h-10 grayscale hover:grayscale-0 transition-all" /> */}
+            <img src="app-icon/logo-white-erajaya.png" alt="Erajaya" className="h-8 grayscale hover:grayscale-0 transition-all" />
+            <img src="app-icon/logo-white-telkom.png" alt="Telkom" className="h-10 grayscale hover:grayscale-0 transition-all" />
             <img src="app-icon/logo-white-surveyor.svg" alt="Surveyor" className="h-10 grayscale hover:grayscale-0 transition-all" />
           </div>
         </div>

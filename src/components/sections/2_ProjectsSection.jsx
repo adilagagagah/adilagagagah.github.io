@@ -1,93 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { projectsData } from '../../data/projects';
 
 export default function ProjectsSection() {
   const navigate = useNavigate();
-
-  // Data Dinamis untuk tiap proyek
-  const projectsData = [
-    {
-      id: 1,
-      slug: "stock-rotation",
-      title: "Stock Rotation Recommendation System",
-      description: "Python script for generating stock rotation recommendations across 400+ stores, reducing analysis time by 90%.",
-      image: "portofolio-1/img-porto-1.png",
-      techStack: ["TensorFlow", "SQL", "Python"]
-    },
-    {
-      id: 2,
-      slug: "churn-prediction",
-      title: "Customer Churn Prediction Model",
-      description: "Machine learning model to predict customer churn with 85% accuracy using historical transaction data.",
-      image: "portofolio-1/img-porto-1.png", // Ganti dengan aset gambar Anda yang lain
-      techStack: ["Scikit-learn", "Pandas", "Python"]
-    },
-    {
-      id: 3,
-      slug: "sales-dashboard",
-      title: "Sales Dashboard & Analytics",
-      description: "Interactive Power BI dashboard for real-time sales monitoring and automated weekly reporting to stakeholders.",
-      image: "portofolio-1/img-porto-1.png",
-      techStack: ["Power BI", "SQL", "Excel"]
-    },
-    {
-      id: 4,
-      slug: "data-pipeline",
-      title: "Automated Data Pipeline",
-      description: "ETL pipeline to extract, clean, and load data from various APIs into a centralized PostgreSQL data warehouse.",
-      image: "portofolio-1/img-porto-1.png",
-      techStack: ["Python", "PostgreSQL", "Git"]
-    },
-    {
-      id: 5,
-      slug: "nlp-sentiment-analysis",
-      title: "NLP Sentiment Analysis",
-      description: "Deep learning model analyzing customer reviews to automatically categorize feedback sentiments efficiently.",
-      image: "portofolio-1/img-porto-1.png",
-      techStack: ["TensorFlow", "Python", "React"]
-    },
-    {
-      id: 6,
-      slug: "nlp-sentiment-analysis-2",
-      title: "NLP Sentiment Analysis",
-      description: "Deep learning model analyzing customer reviews to automatically categorize feedback sentiments efficiently.",
-      image: "portofolio-1/img-porto-1.png",
-      techStack: ["TensorFlow", "Python", "React"]
-    },
-    {
-      id: 7,
-      slug: "nlp-sentiment-analysis-2",
-      title: "NLP Sentiment Analysis",
-      description: "Deep learning model analyzing customer reviews to automatically categorize feedback sentiments efficiently.",
-      image: "portofolio-1/img-porto-1.png",
-      techStack: ["TensorFlow", "Python", "React"]
-    },
-    {
-      id: 8,
-      slug: "nlp-sentiment-analysis-2",
-      title: "NLP Sentiment Analysis",
-      description: "Deep learning model analyzing customer reviews to automatically categorize feedback sentiments efficiently.",
-      image: "portofolio-1/img-porto-1.png",
-      techStack: ["TensorFlow", "Python", "React"]
-    },
-    {
-      id: 9,
-      slug: "nlp-sentiment-analysis-2",
-      title: "NLP Sentiment Analysis",
-      description: "Deep learning model analyzing customer reviews to automatically categorize feedback sentiments efficiently.",
-      image: "portofolio-1/img-porto-1.png",
-      techStack: ["TensorFlow", "Python", "React"]
-    },
-    {
-      id: 10,
-      slug: "nlp-sentiment-analysis-2",
-      title: "NLP Sentiment Analysis",
-      description: "Deep learning model analyzing customer reviews to automatically categorize feedback sentiments efficiently.",
-      image: "portofolio-1/img-porto-1.png",
-      techStack: ["TensorFlow", "Python", "React"]
-    }
-  ];
-  
+    
   // Referensi dan State untuk Scroll
   const scrollContainerRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -97,15 +14,20 @@ export default function ProjectsSection() {
   const handleScroll = () => {
     if (scrollContainerRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-      setCanScrollLeft(scrollLeft > 0);
-      // Memberikan toleransi 1px agar logika ujung kanan lebih presisi
-      setCanScrollRight(Math.ceil(scrollLeft + clientWidth) < scrollWidth - 1);
+      // Toleransi 5px untuk mentok kiri (mengatasi desimal/sub-pixel browser)
+      setCanScrollLeft(scrollLeft > 5);
+      // Toleransi 10px untuk mentok kanan (mengatasi desimal/sub-pixel, flex gap, & scroll snap browser)
+      setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 10);
     }
   };
   
-  // Cek posisi panah saat komponen pertama kali dimuat
+  // Cek posisi panah saat komponen dimuat & saat ukuran window berubah
   useEffect(() => {
     handleScroll();
+    window.addEventListener('resize', handleScroll);
+    return () => {
+      window.removeEventListener('resize', handleScroll);
+    };
   }, []);
 
   // Fungsi eksekusi pergeseran saat panah diklik
@@ -130,7 +52,7 @@ export default function ProjectsSection() {
       if (targetCard) {
         // Hitung jarak persis agar ujung kanan targetCard menyentuh ujung kanan layar
         const targetScroll = targetCard.offsetLeft + targetCard.offsetWidth - clientWidth;
-        container.scrollTo({ left: targetScroll, behavior: 'smooth' });
+        container.scrollTo({ left: targetScroll+1, behavior: 'smooth' });
       }
     } 
     
@@ -144,13 +66,13 @@ export default function ProjectsSection() {
 
       if (targetCard) {
         // Hitung jarak persis agar ujung kiri targetCard menyentuh ujung kiri layar
-        container.scrollTo({ left: targetCard.offsetLeft, behavior: 'smooth' });
+        container.scrollTo({ left: targetCard.offsetLeft-1, behavior: 'smooth' });
       }
     }
   };
 
   return (
-    <section id="projects" className="px-8 py-24">
+    <section id="projects" className="px-8 py-12">
       <div className="mx-auto max-w-7xl relative">
         {/* Header Section */}
         <div className="flex justify-between items-end mb-5 border-b border-white/20 pb-3">
@@ -185,7 +107,7 @@ export default function ProjectsSection() {
               <div 
                 key={project.id} 
                 onClick={() => navigate(`/projects/${project.slug}`)}
-                className="w-[280px] md:w-[320px] max-w-[85vw] flex-shrink-0 rounded-2xl border border-white/10 bg-[#121826] flex flex-col overflow-hidden hover:border-white/50 transition-all cursor-pointer hover:scale-[1.005]"
+                className="mx-1 w-[280px] md:w-[320px] max-w-[85vw] flex-shrink-0 rounded-2xl border border-white/10 bg-[#121826] flex flex-col overflow-hidden hover:border-white/50 transition-all cursor-pointer hover:scale-[1.005]"
               >
                 {/* gambar project */}
                 <img src={project.image} alt={project.title} className="w-full h-48 object-cover border-b border-white/10" />
