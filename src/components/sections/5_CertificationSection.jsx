@@ -30,7 +30,7 @@ export default function CertificationSection() {
   const displayedCerts = certifications
 
   return (
-    <section id="projects" className="px-8 py-12">
+    <section id="certifications" className="px-8 py-12">
       <div className="mx-auto max-w-7xl relative">
 
         {/* Header Section */}

@@ -7,7 +7,7 @@ export default function Navbar() {
         </h1>
 
         <nav className="hidden gap-6 md:flex mr-6">
-          {['Projects', 'Work', 'Educations', 'Sertifications', 'Tech', 'Contact'].map((item) => (
+          {['Projects', 'Work', 'Education', 'Certifications', 'Tech', 'Contact'].map((item) => (
             <a 
               key={item} 
               href={`#${item.toLowerCase()}`} 

@@ -107,7 +107,7 @@ export default function ProjectsSection() {
               <div 
                 key={project.id} 
                 onClick={() => navigate(`/projects/${project.slug}`)}
-                className="mx-1 w-[280px] md:w-[320px] max-w-[85vw] flex-shrink-0 rounded-2xl border border-white/10 bg-[#121826] flex flex-col overflow-hidden hover:border-white/50 transition-all cursor-pointer hover:scale-[1.005]"
+                className="mx-1 w-[280px] md:w-[320px] max-w-[85vw] flex-shrink-0 rounded-2xl border border-white/10 bg-[#121826] flex flex-col overflow-hidden hover:border-white/50 transition-all cursor-pointer hover:-translate-y-1"
               >
                 {/* gambar project */}
                 <img src={project.image} alt={project.title} className="w-full h-48 object-cover border-b border-white/10" />

@@ -54,7 +54,7 @@ export default function TechStackSection() {
   }).slice(0, 3) : [];
 
   return (
-    <section className="px-8 py-12">
+    <section id="tech" className="px-8 py-12">
       <div className="mx-auto max-w-7xl relative">
 
         {/* Header Section */}

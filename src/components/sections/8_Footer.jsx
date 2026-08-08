@@ -1,17 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 px-6 py-8">
+    <footer>
 
-      <div className="mx-auto flex max-w-7xl items-center justify-between">
-
-        <p className="text-sm text-gray-500">
-          © 2026 Gagah
-        </p>
-
-        <p className="text-sm text-gray-500">
-          Built with React & Tailwind
-        </p>
-
+      <div className="mx-auto text-center border-t border-white/15 z-10 relative px-8 py-4">
+        <p className="text-sm text-gray-500">© {new Date().getFullYear()} adilagagagah. All rights reserved.</p>
       </div>
 
     </footer>
